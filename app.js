@@ -28,7 +28,6 @@ new Vue({
         esJugador: true,
         text: "El jugador golpea al monstruo por " + damage,
       });
-      //cssEvento(this.turnos[turnos.length - 1])
       if (this.verificarGanador()) {
         return;
       }
@@ -58,7 +57,6 @@ new Vue({
         });
       } else {
         saludASumar = 100 - this.saludJugador;
-        console.log(saludASumar);
         this.saludJugador = 100;
         this.turnos.unshift({
           esJugador: true,
@@ -107,7 +105,6 @@ new Vue({
     },
     cssEvento(turno) {
       //Este return de un objeto es prque vue asi lo requiere, pero ponerlo acá queda mucho mas entendible en el codigo HTML.
-      turno.esJugador;
       return {
         "player-turno": turno.esJugador,
         "monster-turno": !turno.esJugador,
